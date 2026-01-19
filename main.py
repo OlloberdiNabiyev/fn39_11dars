@@ -32,6 +32,9 @@ class Person(ABC):
     def address(self):
         del self.__address
 
+    @abstractmethod
+    def get_info(self):
+        pass
 
 class Employee(Person):
     def __init__(self, name, lastname, age, address,salary):
@@ -46,6 +49,8 @@ class Employee(Person):
     @salary.deleter
     def salary(self):
         del self.__salary
+    def get_info(self):
+        pass
 
 e1 = Employee('Nodir','Valiyev',21,'fergana',700)
 e2 = Employee('Vali','Toxirov',18,'tashkent',550)
